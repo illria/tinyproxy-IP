@@ -1,0 +1,22 @@
+{
+  "time_utc": "2026-08-04T19:26:26Z",
+  "run_id": "local",
+  "domains": [
+    "pull.free.video.10010.com"
+  ],
+  "summary": {
+    "total_ips": 1,
+    "open_80": 1,
+    "open_443": 1,
+    "open_both": 1,
+    "http_gateway_443": 1,
+    "tls_cdn_443": 1,
+    "best_http_ip": "220.205.125.35",
+    "best_https_ip": "14.215.182.75",
+    "dns_tls_cdn": "220.205.125.35"
+  },
+  "items": [
+    {"domain":"pull.free.video.10010.com","ip":"220.205.125.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":4,"latency_ms_443":4,"kind":"tls-cdn","note":"tls-cdn"},
+    {"domain":"seed-gateway","ip":"14.215.182.75","port80":"n/a","port443":"ok","http_code":"","https_code":"","latency_ms_80":null,"latency_ms_443":9,"kind":"http-gateway","note":"seed"}
+  ]
+}

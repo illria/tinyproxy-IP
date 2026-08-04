@@ -1,0 +1,6 @@
+# Domains to resolve (one per line)
+# Primary free-video pull domain from conf
+pull.free.video.10010.com
+
+# Optional related free-play domain (uncomment if needed)
+# chinaunicom-playe-free.10010.com

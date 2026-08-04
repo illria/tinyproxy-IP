@@ -1,0 +1,2 @@
+# Keep result artifacts but ignore local history dumps
+results/history_*.json

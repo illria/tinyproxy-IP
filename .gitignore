@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Local secrets — never commit
+.env
+.env.*
+*.pem
+secrets/
+
+# Python / temp
+__pycache__/
+*.pyc
+/tmp/
+
+# Optional local history clutter (keep latest.* tracked)
+results/history_*.json

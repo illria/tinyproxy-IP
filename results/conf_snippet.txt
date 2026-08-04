@@ -1,0 +1,6 @@
+http_ip=220.205.125.35;
+http_port=80;
+https_ip=14.215.182.75;
+https_port=443;
+# kind: http_ip=CDN(80)  https_ip=http-gateway(443), NOT dns tls-cdn
+# dns_tls_cdn(do_not_use_as_https_ip)=220.205.125.35

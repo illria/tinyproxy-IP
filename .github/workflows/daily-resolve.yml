@@ -1,0 +1,76 @@
+name: Daily resolve free-video IPs
+
+on:
+  schedule:
+    # Every day at 01:00 UTC ≈ 09:00 Asia/Shanghai
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+    inputs:
+      notify:
+        description: "Send WeCom notification"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-resolve
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    name: Resolve & probe & notify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq dnsutils curl netcat-openbsd
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Resolve domain and probe 80/443
+        env:
+          TIMEOUT_SEC: "3"
+        run: |
+          ./scripts/resolve_and_probe.sh
+          echo "----- latest.txt -----"
+          cat results/latest.txt
+          echo "----- conf_snippet -----"
+          cat results/conf_snippet.txt
+
+      - name: Commit results back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/
+          if git diff --cached --quiet; then
+            echo "No result changes to commit"
+          else
+            git commit -m "chore: update IP probe results $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - name: Notify WeCom
+        if: ${{ github.event_name == 'schedule' || inputs.notify == 'true' }}
+        env:
+          # Prefer full URL secret; fallback to key-only secret
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
+          WECOM_WEBHOOK_KEY: ${{ secrets.WECOM_WEBHOOK_KEY }}
+        run: |
+          if [ -z "${WECOM_WEBHOOK_URL}" ] && [ -z "${WECOM_WEBHOOK_KEY}" ]; then
+            echo "ERROR: Please set repository secret WECOM_WEBHOOK_URL or WECOM_WEBHOOK_KEY"
+            exit 1
+          fi
+          ./scripts/notify_wecom.sh results/latest.md

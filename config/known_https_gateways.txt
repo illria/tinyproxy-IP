@@ -1,0 +1,4 @@
+# Known TinyProxy-style HTTPS gateways (plain HTTP on 443).
+# These are NOT the same as DNS A records of pull.free.video.10010.com
+# DNS A records are usually TLS CDN and will make HTTPS test fail.
+14.215.182.75
