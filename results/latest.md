@@ -1,7 +1,7 @@
 # tinyproxy-IP 解析探测报告
 
-- **UTC 时间**: 2026-10-04T06:29:21Z
-- **Run ID**: 37182934759
+- **UTC 时间**: 2026-10-05T06:22:43Z
+- **Run ID**: 37272087578
 - **域名**: `pull.free.video.10010.com`
 - **解析到 IP 数**: 2
 - **80 开放**: 2
@@ -22,9 +22,9 @@ TinyProxy 的 `https_first` Host 注入需要 **443 端口上的明文 HTTP 网�
 
 | domain | ip | port80 | lat80(ms) | http_code | port443 | lat443(ms) | https_code | kind |
 |---|---|---|---:|---|---|---:|---|---|
-| pull.free.video.10010.com | 106.225.194.35 | ok | 209 | 404 | ok | 203 | 404 | tls-cdn |
-| pull.free.video.10010.com | 60.221.222.21 | ok | 198 | 404 | ok | 198 | 404 | tls-cdn |
-| seed-gateway | 14.215.182.75 | - | - | - | ok | 204 | - | http-gateway |
+| pull.free.video.10010.com | 106.225.194.35 | ok | 278 | 404 | ok | 1286 | 404 | tls-cdn |
+| pull.free.video.10010.com | 60.221.222.21 | ok | 261 | 404 | ok | 273 | 404 | tls-cdn |
+| seed-gateway | 14.215.182.75 | - | - | - | ok | 251 | - | http-gateway |
 
 ## 可直接用于 conf 的片段
 
