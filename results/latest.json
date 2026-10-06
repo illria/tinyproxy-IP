@@ -1,23 +1,22 @@
 {
-  "time_utc": "2026-10-05T06:22:43Z",
-  "run_id": "37272087578",
+  "time_utc": "2026-10-06T06:58:20Z",
+  "run_id": "37426785939",
   "domains": [
     "pull.free.video.10010.com"
   ],
   "summary": {
-    "total_ips": 2,
-    "open_80": 2,
-    "open_443": 2,
-    "open_both": 2,
+    "total_ips": 1,
+    "open_80": 1,
+    "open_443": 1,
+    "open_both": 1,
     "http_gateway_443": 1,
-    "tls_cdn_443": 2,
+    "tls_cdn_443": 1,
     "best_http_ip": "106.225.194.35",
     "best_https_ip": "14.215.182.75",
     "dns_tls_cdn": "106.225.194.35"
   },
   "items": [
-    {"domain":"pull.free.video.10010.com","ip":"106.225.194.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":278,"latency_ms_443":1286,"kind":"tls-cdn","note":"tls-cdn"},
-    {"domain":"pull.free.video.10010.com","ip":"60.221.222.21","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":261,"latency_ms_443":273,"kind":"tls-cdn","note":"tls-cdn"},
-    {"domain":"seed-gateway","ip":"14.215.182.75","port80":"n/a","port443":"ok","http_code":"","https_code":"","latency_ms_80":null,"latency_ms_443":251,"kind":"http-gateway","note":"seed"}
+    {"domain":"pull.free.video.10010.com","ip":"106.225.194.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":316,"latency_ms_443":278,"kind":"tls-cdn","note":"tls-cdn"},
+    {"domain":"seed-gateway","ip":"14.215.182.75","port80":"n/a","port443":"ok","http_code":"","https_code":"","latency_ms_80":null,"latency_ms_443":255,"kind":"http-gateway","note":"seed"}
   ]
 }
