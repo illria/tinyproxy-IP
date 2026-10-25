@@ -1,14 +1,14 @@
 # tinyproxy-IP 解析探测报告
 
-- **UTC 时间**: 2026-10-24T05:10:50Z
-- **Run ID**: 40065226765
+- **UTC 时间**: 2026-10-25T05:27:11Z
+- **Run ID**: 40165564461
 - **域名**: `pull.free.video.10010.com`
 - **解析到 IP 数**: 2
-- **80 开放**: 1
+- **80 开放**: 2
 - **443 开放**: 2
 - **http-gateway(443)**: 1
 - **tls-cdn(443)**: 2
-- **推荐 http_ip**: `36.150.230.35`（CDN，走 80）
+- **推荐 http_ip**: `106.225.194.35`（CDN，走 80）
 - **推荐 https_ip**: `14.215.182.75`（必须是 http-gateway，不能填 DNS 解析 IP）
 - **DNS 解析到的 TLS CDN（勿作 https_ip）**: `106.225.194.35`
 
@@ -22,14 +22,14 @@ TinyProxy 的 `https_first` Host 注入需要 **443 端口上的明文 HTTP 网�
 
 | domain | ip | port80 | lat80(ms) | http_code | port443 | lat443(ms) | https_code | kind |
 |---|---|---|---:|---|---|---:|---|---|
-| pull.free.video.10010.com | 106.225.194.35 | fail | 3004 | 000 | ok | 228 | 404 | tls-cdn |
-| pull.free.video.10010.com | 36.150.230.35 | ok | 162 | 404 | ok | 163 | 404 | tls-cdn |
-| seed-gateway | 14.215.182.75 | - | - | - | ok | 202 | - | http-gateway |
+| pull.free.video.10010.com | 106.225.194.35 | ok | 222 | 404 | ok | 217 | 404 | tls-cdn |
+| pull.free.video.10010.com | 60.221.222.21 | ok | 213 | 404 | ok | 230 | 404 | tls-cdn |
+| seed-gateway | 14.215.182.75 | - | - | - | ok | 206 | - | http-gateway |
 
 ## 可直接用于 conf 的片段
 
 ```
-http_ip=36.150.230.35;
+http_ip=106.225.194.35;
 http_port=80;
 https_ip=14.215.182.75;
 https_port=443;
