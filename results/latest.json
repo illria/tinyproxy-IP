@@ -1,23 +1,23 @@
 {
-  "time_utc": "2026-11-21T07:48:16Z",
-  "run_id": "44881908855",
+  "time_utc": "2026-11-22T07:36:10Z",
+  "run_id": "44998960129",
   "domains": [
     "pull.free.video.10010.com"
   ],
   "summary": {
-    "total_ips": 2,
-    "open_80": 2,
-    "open_443": 2,
-    "open_both": 2,
-    "http_gateway_443": 1,
-    "tls_cdn_443": 2,
+    "total_ips": 3,
+    "open_80": 3,
+    "open_443": 3,
+    "open_both": 3,
+    "http_gateway_443": 0,
+    "tls_cdn_443": 3,
     "best_http_ip": "106.225.194.35",
-    "best_https_ip": "14.215.182.75",
+    "best_https_ip": "",
     "dns_tls_cdn": "106.225.194.35"
   },
   "items": [
-    {"domain":"pull.free.video.10010.com","ip":"106.225.194.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":219,"latency_ms_443":212,"kind":"tls-cdn","note":"tls-cdn"},
-    {"domain":"pull.free.video.10010.com","ip":"60.221.222.21","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":901,"latency_ms_443":-565,"kind":"tls-cdn","note":"tls-cdn"},
-    {"domain":"seed-gateway","ip":"14.215.182.75","port80":"n/a","port443":"ok","http_code":"","https_code":"","latency_ms_80":null,"latency_ms_443":209,"kind":"http-gateway","note":"seed"}
+    {"domain":"pull.free.video.10010.com","ip":"106.225.194.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":-489,"latency_ms_443":1198,"kind":"tls-cdn","note":"tls-cdn"},
+    {"domain":"pull.free.video.10010.com","ip":"117.92.139.35","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":196,"latency_ms_443":213,"kind":"tls-cdn","note":"tls-cdn"},
+    {"domain":"pull.free.video.10010.com","ip":"60.221.222.21","port80":"ok","port443":"ok","http_code":"404","https_code":"404","latency_ms_80":629,"latency_ms_443":-189,"kind":"tls-cdn","note":"tls-cdn"}
   ]
 }

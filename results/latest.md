@@ -1,15 +1,15 @@
 # tinyproxy-IP 解析探测报告
 
-- **UTC 时间**: 2026-11-21T07:48:16Z
-- **Run ID**: 44881908855
+- **UTC 时间**: 2026-11-22T07:36:10Z
+- **Run ID**: 44998960129
 - **域名**: `pull.free.video.10010.com`
-- **解析到 IP 数**: 2
-- **80 开放**: 2
-- **443 开放**: 2
-- **http-gateway(443)**: 1
-- **tls-cdn(443)**: 2
+- **解析到 IP 数**: 3
+- **80 开放**: 3
+- **443 开放**: 3
+- **http-gateway(443)**: 0
+- **tls-cdn(443)**: 3
 - **推荐 http_ip**: `106.225.194.35`（CDN，走 80）
-- **推荐 https_ip**: `14.215.182.75`（必须是 http-gateway，不能填 DNS 解析 IP）
+- **推荐 https_ip**: `N/A`（必须是 http-gateway，不能填 DNS 解析 IP）
 - **DNS 解析到的 TLS CDN（勿作 https_ip）**: `106.225.194.35`
 
 ## 重要
@@ -22,16 +22,16 @@ TinyProxy 的 `https_first` Host 注入需要 **443 端口上的明文 HTTP 网�
 
 | domain | ip | port80 | lat80(ms) | http_code | port443 | lat443(ms) | https_code | kind |
 |---|---|---|---:|---|---|---:|---|---|
-| pull.free.video.10010.com | 106.225.194.35 | ok | 219 | 404 | ok | 212 | 404 | tls-cdn |
-| pull.free.video.10010.com | 60.221.222.21 | ok | 901 | 404 | ok | -565 | 404 | tls-cdn |
-| seed-gateway | 14.215.182.75 | - | - | - | ok | 209 | - | http-gateway |
+| pull.free.video.10010.com | 106.225.194.35 | ok | -489 | 404 | ok | 1198 | 404 | tls-cdn |
+| pull.free.video.10010.com | 117.92.139.35 | ok | 196 | 404 | ok | 213 | 404 | tls-cdn |
+| pull.free.video.10010.com | 60.221.222.21 | ok | 629 | 404 | ok | -189 | 404 | tls-cdn |
 
 ## 可直接用于 conf 的片段
 
 ```
 http_ip=106.225.194.35;
 http_port=80;
-https_ip=14.215.182.75;
+https_ip=请填 http-gateway，勿用 DNS CDN IP;
 https_port=443;
 ```
 
