@@ -1,6 +1,6 @@
 tinyproxy-IP resolve report
-time_utc: 2026-11-23T08:22:45Z
-run_id: 45138115970
+time_utc: 2026-11-24T10:31:13Z
+run_id: 45375530062
 domains: pull.free.video.10010.com
 total_ips: 2
 open_80: 2
@@ -13,6 +13,6 @@ best_https_ip(gateway): 14.215.182.75
 dns_tls_cdn(do_NOT_use_as_https_ip): 106.225.194.35
 
 details:
-  pull.free.video.10010.com\t106.225.194.35\t80=ok/228ms/http=404\t443=ok/234ms/https=404\tkind=tls-cdn
-  pull.free.video.10010.com\t60.221.222.21\t80=ok/273ms/http=404\t443=ok/266ms/https=404\tkind=tls-cdn
-  seed-gateway\t14.215.182.75\t443=ok/-630ms\tkind=http-gateway
+  pull.free.video.10010.com\t106.225.194.35\t80=ok/276ms/http=404\t443=ok/618ms/https=404\tkind=tls-cdn
+  pull.free.video.10010.com\t36.150.230.35\t80=ok/211ms/http=404\t443=ok/-736ms/https=404\tkind=tls-cdn
+  seed-gateway\t14.215.182.75\t443=ok/254ms\tkind=http-gateway
